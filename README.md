@@ -80,3 +80,5 @@ Job:
 
 rake task:
 - https://github.com/sajjadmurtaza/latana/blob/main/lib/tasks/update_packages_list.rake
+
+![alt text](https://raw.githubusercontent.com/sajjadmurtaza49/SchedulyBridge/master/app/assets/images/latana.png "Latana Screenshot")

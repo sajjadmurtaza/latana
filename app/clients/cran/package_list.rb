@@ -15,8 +15,8 @@ module Cran
 
         pkg_name_with_version = "#{pkg_name}_#{pkg_version}"
 
-        open("#{pkg_name_with_version}.tar", 'wb') do |local_file|
-          open("http://cran.r-project.org/src/contrib/#{pkg_name_with_version}.tar.gz") do |remote_file|
+        URI.open("#{pkg_name_with_version}.tar", 'wb') do |local_file|
+          URI.open("http://cran.r-project.org/src/contrib/#{pkg_name_with_version}.tar.gz") do |remote_file|
             pkg_extract = Gem::Package::TarReader.new(Zlib::GzipReader.open(remote_file))
             pkg_extract.rewind
 
@@ -38,6 +38,9 @@ module Cran
         end
 
         File.delete("#{pkg_name_with_version}.tar") if File.exist?("#{pkg_name_with_version}.tar")
+
+      rescue StandardError
+        next
       end
     end
   end
