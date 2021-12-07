@@ -40,6 +40,7 @@ module Cran
         File.delete("#{pkg_name_with_version}.tar") if File.exist?("#{pkg_name_with_version}.tar")
 
       rescue StandardError
+        File.delete("#{pkg_name_with_version}.tar") if File.exist?("#{pkg_name_with_version}.tar")
         next
       end
     end
