@@ -51,6 +51,7 @@ The following diagram show the process/workflow of the application.
                       ```
  *  ```cd latana```
  *  ```bundle install ```
+ *  ```rake db:migrate ```
  *  ```rails s ```
 
  on Next tab 
@@ -60,7 +61,22 @@ The following diagram show the process/workflow of the application.
  For now job will run after each minute(to check that it's working, can change it)
 
 
- **Rake task**
+**Rake task**
   ```rake db:update_packages_list```   
 
-  to update manually package list      
+  to update manually package list
+
+
+**Main files**
+Sidekiq config
+- https://github.com/sajjadmurtaza/latana/blob/main/config/sidekiq.yml
+
+Service:
+  - https://github.com/sajjadmurtaza/latana/blob/main/app/clients/cran/packages.rb
+  - https://github.com/sajjadmurtaza/latana/blob/main/app/clients/cran/package_list.rb      
+
+Job:
+- https://github.com/sajjadmurtaza/latana/blob/main/app/jobs/update_packages_list_job.rb
+
+rake task:
+- https://github.com/sajjadmurtaza/latana/blob/main/lib/tasks/update_packages_list.rake

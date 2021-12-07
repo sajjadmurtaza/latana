@@ -3,6 +3,6 @@
   - urgent
 
 :schedule:
-  hello_world:
+  urgent_workers:
     cron: '0 * * * * *'   # Runs once per minute
     class: UpdatePackagesListJob
