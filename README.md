@@ -58,7 +58,7 @@ The following diagram show the process/workflow of the application.
 
  run ```bundle exec sidekiq -C config/sidekiq.yml```
 
- For now job will run after each minute(to check that it's working, can change it)
+ For now job will run after 20 minute(to check that it's working, can change it)
 
 
 **Rake task**

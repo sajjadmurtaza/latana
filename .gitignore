@@ -11,6 +11,9 @@
 /db/*.sqlite3
 /db/*.sqlite3-*
 *.tar
+*.*.tar
+*.*.*.tar
+*.*.*.*.tar
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
