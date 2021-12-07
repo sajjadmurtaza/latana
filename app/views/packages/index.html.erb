@@ -1,0 +1,15 @@
+<% @packages.each do |pkg| %>
+  <% url = "http://cran.r-project.org/src/contrib/#{pkg.name}_#{pkg.version}.tar.gz"%>
+  <h3>
+    Package: <%= pkg.name %><br />
+    Version: <%= pkg.version %><br />
+    URL: <%= link_to url, url%>
+  </h3><br />
+
+  <b>Full description:</b><br />
+  <% pkg.description.each do |description_key, description_value| %>
+        <%= description_key %> : <%= description_value %><br />
+  <% end %>
+
+  <hr />
+<% end %>
