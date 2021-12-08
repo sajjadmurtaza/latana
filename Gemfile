@@ -22,7 +22,6 @@ gem 'sidekiq'
 gem 'sidekiq-scheduler'
 
 gem 'bootsnap', '>= 1.4.4', require: false
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
   gem 'debug', '>= 1.0.0', platforms: %i[mri mingw x64_mingw]
